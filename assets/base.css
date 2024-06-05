@@ -3458,5 +3458,5 @@ details-disclosure > details {
 
 .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,
 .grid--peek .grid__item {
-  width: calc(50% - var(--grid-mobile-horizontal-spacing));
+  width: calc(50% - 10px);
 }
