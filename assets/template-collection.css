@@ -97,7 +97,7 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
-
+/* styling start Featured collection slider */
 .collection__title.title-wrapper--self-padded-tablet-down {
     padding: 0;
 }
