@@ -97,3 +97,7 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.collection__title.title-wrapper--self-padded-tablet-down {
+    padding: 0;
+}
