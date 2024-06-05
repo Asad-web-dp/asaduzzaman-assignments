@@ -1040,7 +1040,7 @@ summary::-webkit-details-marker {
 
   .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,
   .grid--peek .grid__item {
-    width: calc(50% - var(--grid-mobile-horizontal-spacing));
+    width: calc(50% - var(--grid-mobile-horizontal-spacing) - 3rem);
   }
 
   .slider--tablet.grid--peek.grid--1-col-tablet-down .grid__item,
@@ -3453,4 +3453,10 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+
+
+.slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,
+.grid--peek .grid__item {
+  width: calc(50% - var(--grid-mobile-horizontal-spacing));
 }
