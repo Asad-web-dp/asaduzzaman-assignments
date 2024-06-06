@@ -46,17 +46,40 @@ show_rating: section.settings.show_rating
 </div>
 
 <script>
-$(document).ready(function() {
-setTimeout(function() {
-$('.related-products-slider').slick({
-slidesToShow: 1,
-slidesToScroll: 1,
-autoplay: true,
-autoplaySpeed: 2000,
-// Add any additional configuration options as needed
-});
-}, 1000); // Change the delay time (in milliseconds) as needed
-});
+// $(document).ready(function() {
+// setTimeout(function() {
+
+// }, 1000); // Change the delay time (in milliseconds) as needed
+// });
+
+(function() {
+  function waitForjQuery(trigger, delayInterval, delayTimeout) {
+    var intervalForjQuery = setInterval(function() {
+      if (typeof window.jQuery != 'undefined') {
+        clearInterval(intervalForjQuery);
+        trigger();
+      }
+    }, delayInterval);
+    var timeoutForjQuery = setTimeout(function() {
+      clearInterval(intervalForjQuery);
+    }, delayTimeout);
+  }
+
+  waitForjQuery(function() {
+    var $ = window.jQuery;
+    $(document).ready(function() {
+
+     $('.related-products-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      // Add any additional configuration options as needed
+      });
+
+    });
+  }, 50, 10000);
+})();
 </script>
 
 
