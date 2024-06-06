@@ -3460,3 +3460,15 @@ details-disclosure > details {
 .grid--peek .grid__item {
   width: calc(50% - 10px);
 }
+/* styling start Featured collection slider */
+.slider--desktop,
+.slider.slider--mobile{
+    scroll-padding-left: 0;
+}
+.slider.slider--desktop.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
+    margin-left: 0;
+}
+/* styling start Featured collection slider */
+.collection__title.title-wrapper--self-padded-tablet-down {
+    padding: 0;
+}
