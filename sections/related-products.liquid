@@ -58,25 +58,44 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer="defer"></script>
 
 <script>
-  jQuery(document).ready(function($) {
-    var element_position = $('.related-products').offset().top;
-    $(window).on('scroll', function() {
-      $('.related-products-slider').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-       responsive: [
-          {
-            breakpoint: 749,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            },
-          },
-        ],  
-      // Add any additional configuration options as needed
-      });
-    });
-  });    
+   
+
+  (function() {
+    function waitForjQuery(trigger, delayInterval, delayTimeout) {
+      var intervalForjQuery = setInterval(function() {
+        if (typeof window.jQuery != 'undefined') {
+          clearInterval(intervalForjQuery);
+          trigger();
+        }
+      }, delayInterval);
+      var timeoutForjQuery = setTimeout(function() {
+        clearInterval(intervalForjQuery);
+      }, delayTimeout);
+    }
+
+    waitForjQuery(function() {
+      var $ = window.jQuery;
+      jQuery(document).ready(function($) {
+        var element_position = $('.related-products').offset().top;
+        $(window).on('scroll', function() {
+          $('.related-products-slider').slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+           responsive: [
+              {
+                breakpoint: 749,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                },
+              },
+            ],  
+          // Add any additional configuration options as needed
+          });
+        });
+      }); 
+    }, 50, 10000);
+  })();
 </script>
 {% schema %}
 {
