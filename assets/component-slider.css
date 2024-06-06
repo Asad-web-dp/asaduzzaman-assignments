@@ -375,11 +375,3 @@ slider-component.slider-component-full-width {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
 }
-/* styling start Featured collection slider */
-.slider--desktop,
-.slider.slider--mobile{
-    scroll-padding-left: 0;
-}
-.slider.slider--desktop.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
-    margin-left: 0;
-}
