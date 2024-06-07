@@ -2,6 +2,7 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'section-related-products.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -26,7 +27,7 @@
 
   if recommendations.products_count > section.settings.products_to_show
     assign products_to_display = section.settings.products_to_show
-    assign more_in_collection = true
+    assign more_in_related_products = true
   endif
 
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -70,14 +71,13 @@
     {% endif %}
   </product-recommendations>
 
-  {%- if section.settings.show_view_all and more_in_collection -%}
+  {%- if section.settings.show_view_all and more_in_related_products -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
           href="{{ section.settings.collection.url }}"
           class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
-          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
         >
-          {{ 'sections.featured_collection.view_all' | t }}
+          View All
         </a>
     </div>
   {%- endif -%}
