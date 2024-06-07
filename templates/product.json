@@ -84,7 +84,7 @@
         "view_all_button_link": "shopify:\/\/collections\/all",
         "view_all_style": "solid",
         "enable_desktop_slider": true,
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "heading": "You may also like",
         "heading_size": "h2",
         "products_to_show": 8,
