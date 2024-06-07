@@ -151,7 +151,7 @@
   {%- if section.settings.show_view_all == true -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
-          href="{{ section.settings.collection.url }}"
+          href="{{ section.settings.view_all_button_link }}"
           class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
         >
           View All
@@ -178,6 +178,11 @@
       "id": "show_view_all",
       "default": true,
       "label": "Enable View all Button"
+    },
+    {
+      "type": "url",
+      "id": "view_all_button_link",
+      "label": " View all Button link"
     },
     {
       "type": "select",
