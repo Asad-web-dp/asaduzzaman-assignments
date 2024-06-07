@@ -80,7 +80,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "swipe_on_mobile": false,
