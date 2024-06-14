@@ -11,5 +11,10 @@
 }
 .quickview-btn {
     width: 100%;
-    background: rebeccapurple;
+    background: #212b36;
+    text-align: center;
+    padding: 5px 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
 }
