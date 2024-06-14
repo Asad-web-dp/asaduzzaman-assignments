@@ -5,3 +5,7 @@
     display: inherit !important;
     grid-template-rows: inherit !important;
 }
+.card__information {
+    padding-bottom: 0;
+    width: 100%;
+}
