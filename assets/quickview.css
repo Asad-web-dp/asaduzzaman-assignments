@@ -9,7 +9,10 @@
     padding-bottom: 0;
     width: 100%;
 }
-.quickview-btn {
+.quickview-btn-area a {
+    text-decoration: none;
+}
+.quickview-btn-area a .quickview-btn {
     width: 100%;
     background: #212b36;
     text-align: center;
