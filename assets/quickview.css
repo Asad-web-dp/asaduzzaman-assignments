@@ -9,7 +9,8 @@
     padding-bottom: 0;
     width: 100%;
 }
-.quickview-btn-area a {
+.quickview-btn-area a, 
+.quickview-btn-area a:hover{
     text-decoration: none;
 }
 .quickview-btn-area a .quickview-btn {
