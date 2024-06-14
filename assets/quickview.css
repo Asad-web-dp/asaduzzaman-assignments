@@ -2,5 +2,5 @@
     content: inherit !important;
 }
 .card__content {
-    grid-template-rows: inherit;
+    grid-template-rows: inherit !important;
 }
