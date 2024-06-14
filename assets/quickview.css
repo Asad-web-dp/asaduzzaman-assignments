@@ -1,3 +1,6 @@
 .card__heading a:after {
     content: inherit !important;
 }
+.card__content {
+    grid-template-rows: inherit;
+}
