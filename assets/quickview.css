@@ -11,7 +11,7 @@
 }
 .quickview-btn-area a, 
 .quickview-btn-area a:hover{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .quickview-btn-area a .quickview-btn {
     width: 100%;
