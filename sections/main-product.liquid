@@ -433,9 +433,11 @@
                 </div>
                             
               {%- when 'fake_messaging' -%}
+              {% if block.settings.show_fake_messaging == ture %}
                <div class="fake-messaging">
                  <span>{{ block.settings.fake_messaging_incart }}</span>
                </div>           
+              {% endif %}    
                             
               {%- when 'popup' -%}
                 <modal-opener
@@ -929,10 +931,28 @@
       "limit": 1,
       "settings": [
           {
+            "type": "checkbox",
+            "id": "show_fake_messaging",
+            "label": "Show Fake Messaging",
+            "default": true
+          },
+          {
             "type": "text",
             "id": "fake_messaging_incart",
             "label": "In Cart Fake Messaging",
             "default": "people have this in their carts right now"
+          },
+          {
+            "type": "number",
+            "id": "minimum_number_of_people",
+            "label": "Minimum Number Of People",
+            "default": 20
+          },
+          {
+            "type": "number",
+            "id": "maximum_number_of_people",
+            "label": "Maximum Number Of People",
+            "default": 30
           }
       ]
     },
