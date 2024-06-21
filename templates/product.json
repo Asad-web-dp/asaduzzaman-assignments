@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -32,6 +41,12 @@
           "settings": {
           }
         },
+        "fake_messaging_DMJyHt": {
+          "type": "fake_messaging",
+          "settings": {
+            "fake_messaging_incart": "people have this in their carts right now"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -57,6 +72,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "fake_messaging_DMJyHt",
         "buy_buttons",
         "description",
         "share"
