@@ -433,13 +433,16 @@
                 </div>
                             
               {%- when 'fake_messaging' -%}
-               <div class="fake-messaging">
-                 {% assign min = 10 %}
+                {% assign min = 10 %}
                 {% assign max = 20 %}
                 {% assign diff = max | minus: min %}
-                {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
-                <span>{{ randomNumber }}</span><span>{{ block.settings.fake_messaging_incart }}</span>
-               </div>           
+                {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}            
+               
+                <div class="fake-messaging">
+                  {% if block.settings.fake_messaging_incart != blank %}
+                  <span>{{ randomNumber }}</span> <span>{{ block.settings.fake_messaging_incart }}</span>
+                  {% endif %}
+                </div>           
                  
                             
               {%- when 'popup' -%}
