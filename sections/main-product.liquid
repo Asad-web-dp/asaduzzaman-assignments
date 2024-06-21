@@ -434,7 +434,7 @@
                             
               {%- when 'fake_messaging' -%}
                <div class="fake-messaging">
-                 
+                 <span>{{ block.settings.fake_messaging_incart }}</span>
                </div>           
                             
               {%- when 'popup' -%}
@@ -921,6 +921,19 @@
           ],
           "default": "circle"
         }
+      ]
+    },
+    {
+      "type": "fake_messaging",
+      "name": "Fake Messaging In Cart",
+      "limit": 1,
+      "settings": [
+          {
+            "type": "text",
+            "id": "fake_messaging_incart",
+            "label": "In Cart Fake Messaging",
+            "default": "people have this in their carts right now"
+          }
       ]
     },
     {
