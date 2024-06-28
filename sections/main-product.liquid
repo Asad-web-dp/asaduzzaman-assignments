@@ -433,8 +433,8 @@
                 </div>
                             
               {%- when 'fake_messaging' -%}
-                {% assign min = 10 %}
-                {% assign max = 20 %}
+                {% assign min = block.settings.minimum_number_of_people %}
+                {% assign max = block.settings.maximum_number_of_people %}
                 {% assign diff = max | minus: min %}
                 {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}            
 
