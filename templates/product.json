@@ -44,7 +44,10 @@
         "fake_messaging_DMJyHt": {
           "type": "fake_messaging",
           "settings": {
-            "fake_messaging_incart": "people have this in their carts right now"
+            "show_fake_messaging": false,
+            "fake_messaging_incart": "people have this in their carts right now",
+            "minimum_number_of_people": 20,
+            "maximum_number_of_people": 30
           }
         },
         "buy_buttons": {
